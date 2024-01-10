@@ -2,6 +2,8 @@ import { createStore } from "redux";
 
 const initialState = { counter: 0, showCounter: true };
 
+// never mutate the existing state
+// always return a brand new state object
 const counterReducer = (state = initialState, action) => {
   if (action.type === "increment") {
     return {
